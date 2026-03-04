@@ -1,40 +1,58 @@
 "use client";
 
-import Link from "next/link";
-import { Download } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import BlogPreview from "@/components/BlogPreview";
+import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 
-export default function ResumePage() {
+export default function Home() {
   return (
-    <div className="min-h-screen bg-dark text-white flex flex-col">
+    <main className="relative">
+      
+      {/* Navigation */}
+      <Navbar />
 
-      {/* Top Bar */}
-      <div className="flex justify-between items-center px-6 py-4 border-b border-gray-800">
-        <Link
-          href="/"
-          className="text-sm text-gray-400 hover:text-white transition"
-        >
-          ← Back to Home
-        </Link>
+      {/* Hero Section */}
+      <section id="home">
+        <Hero />
+      </section>
 
-        <a
-          href="/resume.pdf"
-          download
-          className="flex items-center gap-2 bg-primary px-4 py-2 rounded-full text-sm hover:scale-105 transition"
-        >
-          <Download size={16} />
-          Download Resume
-        </a>
-      </div>
+      {/* About */}
+      <section id="about" className="py-32 px-6 max-w-5xl mx-auto">
+        <About />
+      </section>
 
-      {/* PDF Viewer */}
-      <div className="flex-1">
-        <iframe
-          src="/resume.pdf"
-          className="w-full h-full"
-          title="Resume"
-        />
-      </div>
+      {/* Experience */}
+      <section id="experience" className="py-32 bg-black/40 px-6">
+        <Experience />
+      </section>
 
-    </div>
+      {/* Projects */}
+      <section id="projects" className="py-32 px-6 max-w-6xl mx-auto">
+        <Projects />
+      </section>
+
+      {/* Skills */}
+      <section id="skills" className="py-32 bg-black/40 px-6">
+        <Skills />
+      </section>
+
+      {/* Blog Preview */}
+      <section id="blog" className="py-32 px-6 max-w-5xl mx-auto">
+        <BlogPreview />
+      </section>
+
+      {/* Footer */}
+      <Footer />
+
+      {/* AI Chatbot Floating */}
+      <Chatbot />
+
+    </main>
   );
 }
