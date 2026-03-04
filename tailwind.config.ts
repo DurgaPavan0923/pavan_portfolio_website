@@ -2,18 +2,18 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}"
   ],
   theme: {
     extend: {
       colors: {
-        primary: "#6366f1",
-        dark: "#0f172a",
-      },
-    },
+        primary: "#2563eb",
+        dark: "#0a0a0a"
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 
 export default config;
