@@ -5,7 +5,7 @@ import { structuredData } from "@/lib/seo";
 export const metadata = {
   title: "Rajana Durga Pavan Kumar | AI/ML Engineer",
   description:
-    "AI/ML Engineer specializing in intelligent systems and scalable web applications."
+    "AI/ML Engineer specializing in intelligent systems and scalable applications."
 };
 
 export default function RootLayout({
@@ -18,6 +18,7 @@ export default function RootLayout({
       <body>
         <ThreeBackground />
         {children}
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
